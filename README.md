@@ -28,7 +28,7 @@ filter.get(3004) # false
 filter.get(3005) # true
 filter.get(3006) # false
 filter.serialize('path.bin')
-reloaded = Bitfield.new(2**16, File.binread('path.bin'))
+reloaded = Bitfield.deserialize('path.bin', 2**16)
 filter.get(3004) # false
 filter.get(3005) # true
 filter.get(3006) # false
